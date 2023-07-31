@@ -1,3 +1,5 @@
+import Factory.OS;
+import Factory.SystemFactory;
 import SingleTon.Singleton;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -6,9 +8,14 @@ public class Main {
     public static void main(String[] args) {
 
         Singleton obj1 = Singleton.getInstance();
-        System.out.println(obj1.hashCode());
+        System.out.println("Singleton test: "+ obj1.hashCode());
         Singleton obj2 = Singleton.getInstance();
-        System.out.println(obj2.hashCode());
+        System.out.println("Singleton test: "+ obj2.hashCode());
+
+
+        SystemFactory systemFactory = new SystemFactory();
+        OS obj = systemFactory.getInstance("Android");
+        obj.spec();
 
 
     }
