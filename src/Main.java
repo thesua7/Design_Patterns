@@ -1,3 +1,6 @@
+import Adapter.AdapterConverter;
+import Adapter.Pen;
+import Adapter.Task;
 import Builder.ObjBuilder;
 import Factory.OS;
 import Factory.SystemFactory;
@@ -29,6 +32,18 @@ public class Main {
         System.out.println("Name: "+ pagani.getCarBrand());
         System.out.println("Speed: "+ pagani.getSpeed());
         System.out.println("Price: "+ pagani.getPrice()+" Millions");
+
+
+        //Structural Patterns #1
+        Pen writter = new AdapterConverter();
+        Task task = new Task();
+        task.setP(writter);
+        task.write("Hello! I'm pencil");
+
+
+
+
+
 
     }
 }
