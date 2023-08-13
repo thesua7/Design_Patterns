@@ -37,10 +37,10 @@ public class compositeRunner {
 
         casing.addComponents(motherboard);
 
-        computer.addComponents(computer);
+        computer.addComponents(casing);
         computer.addComponents(accessories);
 
-        motherboard.ShowPrice();
+        computer.ShowPrice();
 
 
 
